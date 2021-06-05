@@ -1,3 +1,6 @@
+Vue.createApp({
+
+});
 
 
 // const buttonEl = document.querySelector("button");
