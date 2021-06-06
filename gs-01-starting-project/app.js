@@ -2,16 +2,16 @@ Vue.createApp({
   data() {
     return {
       goals: [],
-      enteredValue: ''
+      enteredValue: "",
     };
   },
   methods: {
     addGoal() {
       this.goals.push(this.enteredValue);
-      this.enteredValue = '';
-    }
-  }
-}).mount('#app');
+      this.enteredValue = "";
+    },
+  },
+}).mount("#app");
 
 // const buttonEl = document.querySelector('button');
 // const inputEl = document.querySelector('input');
