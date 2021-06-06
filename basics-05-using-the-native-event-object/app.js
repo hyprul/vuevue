@@ -22,6 +22,11 @@ const app = Vue.createApp({
     //     this.fullName = this.name + " " + value;
     //   }
     // },
+    counter(value) {
+      if (value > 50) {
+        this.counter = 0;
+      }
+    },
   },
   methods: {
     add(num) {
@@ -43,7 +48,7 @@ const app = Vue.createApp({
   },
   computed: {
     fullName() {
-      if (this.name == "" && this.lastName == "") {
+      if (this.name == "" || this.lastName == "") {
         return "";
       }
       return this.name + " " + this.lastName;
