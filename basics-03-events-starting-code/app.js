@@ -15,6 +15,9 @@ const app = Vue.createApp({
     decCount(value) {
       this.counter -= value;
     },
+    submitForm() {
+      alert("Submitted");
+    },
   },
 });
 
