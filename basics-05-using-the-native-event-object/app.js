@@ -3,7 +3,17 @@ const app = Vue.createApp({
     return {
       counter: 0,
       name: "",
+      fullName: "",
     };
+  },
+  watch: {
+    name(value) {
+      if (value == "") {
+        this.fullName = "";
+      } else {
+        this.fullName = value + " " + "Huang";
+      }
+    },
   },
   methods: {
     add(num) {
@@ -24,12 +34,12 @@ const app = Vue.createApp({
     },
   },
   computed: {
-    fullName() {
-      if (this.name == "") {
-        return "";
-      }
-      return this.name + " " + "Huang";
-    },
+    // fullName() {
+    //   if (this.name == "") {
+    //     return "";
+    //   }
+    //   return this.name + " " + "Huang";
+    // },
   },
 });
 
