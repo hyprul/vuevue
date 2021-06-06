@@ -23,6 +23,14 @@ const app = Vue.createApp({
       return this.name + " " + "Huang";
     },
   },
+  computed: {
+    fullName() {
+      if (this.name == "") {
+        return "";
+      }
+      return this.name + " " + "Huang";
+    },
+  },
 });
 
 app.mount("#events");
