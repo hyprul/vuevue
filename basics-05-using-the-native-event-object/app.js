@@ -4,24 +4,24 @@ const app = Vue.createApp({
       counter: 0,
       name: "",
       lastName: "",
-      fullName: "",
+      // fullName: "",
     };
   },
   watch: {
-    name(value) {
-      if (value == "") {
-        this.fullName = "";
-      } else {
-        this.fullName = value + " " + this.lastName;
-      }
-    },
-    lastName(value) {
-      if (value == "") {
-        this.fullName = "";
-      } else {
-        this.fullName = this.name + " " + value;
-      }
-    },
+    // name(value) {
+    //   if (value == "") {
+    //     this.fullName = "";
+    //   } else {
+    //     this.fullName = value + " " + this.lastName;
+    //   }
+    // },
+    // lastName(value) {
+    //   if (value == "") {
+    //     this.fullName = "";
+    //   } else {
+    //     this.fullName = this.name + " " + value;
+    //   }
+    // },
   },
   methods: {
     add(num) {
@@ -35,19 +35,19 @@ const app = Vue.createApp({
       (this.name = ""), (this.counter = 0), (this.lastName = "");
     },
     outputFullName() {
-      if (this.name == "") {
+      if (this.name == "" && this.lastName == "") {
         return "";
       }
-      return this.name + " " + "Huang";
+      return this.name + " " + this.lastName;
     },
   },
   computed: {
-    // fullName() {
-    //   if (this.name == "") {
-    //     return "";
-    //   }
-    //   return this.name + " " + "Huang";
-    // },
+    fullName() {
+      if (this.name == "" && this.lastName == "") {
+        return "";
+      }
+      return this.name + " " + this.lastName;
+    },
   },
 });
 
