@@ -22,6 +22,8 @@ const app = Vue.createApp({
     //     this.fullName = this.name + " " + value;
     //   }
     // },
+
+    //check on condition
     counter(value) {
       if (value > 50) {
         this.counter = 0;
