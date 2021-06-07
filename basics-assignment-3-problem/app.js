@@ -5,16 +5,13 @@ const app = Vue.createApp({
     };
   },
   methods: {
-    addOne() {
-      this.number += 1;
-    },
-    addFive() {
-      this.number += 5;
+    addNumber(num) {
+      this.number += num;
     },
   },
   watch: {
     result() {
-    console.log("Watcher Mounted!")
+      console.log("Watcher Mounted!");
       that = this;
       setTimeout(function () {
         console.log("hit timer");
