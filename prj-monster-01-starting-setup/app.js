@@ -9,6 +9,7 @@ const app = Vue.createApp({
       playerHealth: 100,
       currentRound: 0,
       winner: null,
+      logMessages: [],
     };
   },
   methods: {
@@ -44,11 +45,19 @@ const app = Vue.createApp({
       this.monsterHealth = 100;
       this.winner = null;
       this.currentRound = 0;
+      this.logMessages = [];
     },
-    surrenderGame(){
-        this.playerHealth = 0;
-        this.winner = 'monster';
-    }
+    surrenderGame() {
+      this.playerHealth = 0;
+      this.winner = "monster";
+    },
+    addLogMessage(who, what, value) {
+      this.logMessages.unshift({
+        actionBy: who,
+        actionType: what,
+        actionValue: value,
+      });
+    },
   },
   computed: {
     monsterBarStyles() {
