@@ -9,8 +9,9 @@ const app = Vue.createApp({
     attackMonster() {
       const attackValue = Math.floor(Math.random() * (12 - 5)) + 5;
       this.monsterHealth -= attackValue;
-
-      const monsterAttackValue = Math.floor(Math.random() * (12 - 5)) + 5;
+    },
+    attackPlayer() {
+      const monsterAttackValue = Math.floor(Math.random() * (15 - 8)) + 8;
       this.playerHealth -= monsterAttackValue;
     },
   },
