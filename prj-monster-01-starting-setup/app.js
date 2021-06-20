@@ -16,16 +16,19 @@ const app = Vue.createApp({
     attackMonster() {
       const attackValue = getRandomValue(5, 12);
       this.monsterHealth -= attackValue;
+      this.addLogMessage("Player", "Attack", attackValue);
       this.attackPlayer();
       this.currentRound += 1;
     },
     attackPlayer() {
       const monsterAttackValue = getRandomValue(8, 15);
+      this.addLogMessage("Monster", "Attack", monsterAttackValue);
       this.playerHealth -= monsterAttackValue;
     },
     specialAttackMonster() {
       const attackValue = getRandomValue(10, 25);
       this.monsterHealth -= attackValue;
+      this.addLogMessage("Player", "Special Attack", monsterAttackValue);
       this.attackPlayer();
       this.currentRound += 1;
     },
@@ -36,6 +39,7 @@ const app = Vue.createApp({
       } else {
         this.playerHealth += healValue;
       }
+      this.addLogMessage("Player", "Heal Self", healValue);
 
       this.attackPlayer();
       this.currentRound += 1;
