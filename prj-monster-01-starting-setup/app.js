@@ -50,6 +50,14 @@ const app = Vue.createApp({
       return this.currentRound % 3 !== 0;
     },
   },
+  watch: {
+      playerHealth(){
+
+      },
+      monsterHealth(){
+
+      }
+  }
 });
 
 app.mount("#game");
