@@ -28,7 +28,7 @@ const app = Vue.createApp({
     specialAttackMonster() {
       const attackValue = getRandomValue(10, 25);
       this.monsterHealth -= attackValue;
-      this.addLogMessage("Player", "Special Attack", monsterAttackValue);
+      this.addLogMessage("Player", "Special Attack", attackValue);
       this.attackPlayer();
       this.currentRound += 1;
     },
