@@ -28,9 +28,19 @@ const app = Vue.createApp({
   updated() {
     console.log("updated()");
   },
+  beforeUnmount() {
+    console.log("beforeUnmount()");
+  },
+  unmounted() {
+    console.log("unmounted()");
+  },
 });
 
 app.mount("#app");
+
+setTimeout(() => {
+  app.unmount();
+}, 5000);
 
 const data = {
   message: "Hello!",
