@@ -1,1 +1,12 @@
-const app = Vue.createApp({});
+const app = Vue.createApp({
+  data() {
+    return {
+        monsterHealth: 100,
+        playerHealth: 100
+    };
+  },
+  methods: {},
+  computed: {},
+});
+
+app.mount("#game");
