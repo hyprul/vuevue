@@ -39,6 +39,12 @@ const app = Vue.createApp({
       this.attackPlayer();
       this.currentRound += 1;
     },
+    newGame() {
+      this.playerHealth = 100;
+      this.monsterHealth = 100;
+      this.winner = null;
+      this.currentRound = 0;
+    },
   },
   computed: {
     monsterBarStyles() {
