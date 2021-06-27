@@ -15,7 +15,13 @@ const app = Vue.createApp({
           email: "julie@localhost.com",
         },
       ],
+      detailsVisible: false,
     };
+  },
+  methods: {
+    toggleDetails() {
+      this.detailsVisible = !this.detailsVisible;
+    },
   },
 });
 
