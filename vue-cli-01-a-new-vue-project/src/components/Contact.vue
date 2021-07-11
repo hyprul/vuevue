@@ -42,7 +42,17 @@ export default {
       // },
     },
   },
-
+  // emits: ["toggle-favorite"],
+  emits: {
+    "toggle-favorite": function (id) {
+      if (id) {
+        return true;
+      } else {
+        console.log("Id is missing");
+        return false;
+      }
+    },
+  },
   data() {
     return {
       detailsAreVisible: false,
