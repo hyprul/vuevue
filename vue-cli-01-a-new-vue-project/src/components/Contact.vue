@@ -15,7 +15,13 @@
 
 <script>
 export default {
-  props: ["name", "phoneNumber", "email", "isFavorite"],
+  //props: ["name", "phoneNumber", "email", "isFavorite"],
+  props: {
+    name: String,
+    phoneNumber: String,
+    email: String,
+    isFavorite: String,
+  },
 
   data() {
     return {
