@@ -1,7 +1,7 @@
 <template>
   <section>
     <ActiveUser :username="user.name" :age="user.age" />
-    <UserData />
+    <UserData @change-user="changeUser" />
   </section>
 </template>
 
@@ -14,6 +14,12 @@ export default {
         age: "28",
       },
     };
+  },
+  methods: {
+    changeUser(name, age) {
+      this.user.name = name;
+      this.user.age = age;
+    },
   },
 };
 </script>
