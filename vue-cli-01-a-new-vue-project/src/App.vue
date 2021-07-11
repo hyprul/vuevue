@@ -1,7 +1,7 @@
 <template>
   <section>
     <header><h1>My Friends</h1></header>
-    <Form />
+    <Form @add-contact="addContact" />
     <ul>
       <Contact
         v-for="friend in friends"
@@ -46,10 +46,19 @@ export default {
       );
       identifiedFriend.isFavorite = !identifiedFriend.isFavorite;
     },
+    addContact(name, phone, email) {
+      const newFriend = {
+        id: new Date().toISOString(),
+        name: name,
+        phone: phone,
+        email: email,
+        isFavorite: false,
+      };
+      this.friends.push(newFriend);
+    },
   },
 };
 </script>
-
 
 
 <style>
