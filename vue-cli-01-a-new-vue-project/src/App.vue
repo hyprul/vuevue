@@ -6,8 +6,14 @@
         name="Manuel Lorenz"
         phone-number="0123445"
         email="ml@gmaikl.com"
+        is-favorite="1"
       />
-      <Contact name="Julie blah" phone-number="859544" email="jbl@gmaikl.com" />
+      <Contact
+        name="Julie blah"
+        phone-number="859544"
+        email="jbl@gmaikl.com"
+        is-favorite="0"
+      />
     </ul>
   </section>
 </template>
