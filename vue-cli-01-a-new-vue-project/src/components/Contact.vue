@@ -17,10 +17,22 @@
 export default {
   //props: ["name", "phoneNumber", "email", "isFavorite"],
   props: {
-    name: String,
-    phoneNumber: String,
-    email: String,
-    isFavorite: String,
+    name: {
+      type: String,
+      required: true,
+    },
+    phoneNumber: {
+      type: String,
+      required: true,
+    },
+    email: {
+      type: String,
+      required: true,
+    },
+    isFavorite: {
+      type: String,
+      required: false,
+    },
   },
 
   data() {
