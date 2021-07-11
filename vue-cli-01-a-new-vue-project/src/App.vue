@@ -2,8 +2,12 @@
   <section>
     <header><h1>My Friends</h1></header>
     <ul>
-      <Contact />
-      <Contact />
+      <Contact
+        name="Manuel Lorenz"
+        phone-number="0123445"
+        email="ml@gmaikl.com"
+      />
+      <Contact name="Julie blah" phone-number="859544" email="jbl@gmaikl.com" />
     </ul>
   </section>
 </template>
