@@ -9,6 +9,7 @@
       <li><strong>Phone:</strong> {{ phoneNumber }}</li>
       <li><strong>Email:</strong> {{ email }}</li>
     </ul>
+    <button @click="deleteFriend">Delete</button>
   </li>
 </template>
 
@@ -42,17 +43,25 @@ export default {
       // },
     },
   },
-  // emits: ["toggle-favorite"],
-  emits: {
-    "toggle-favorite": function (id) {
-      if (id) {
-        return true;
-      } else {
-        console.log("Id is missing");
-        return false;
-      }
-    },
-  },
+  emits: ["toggle-favorite", "delete-friend"],
+  // emits: {
+  //   "toggle-favorite": function (id) {
+  //     if (id) {
+  //       return true;
+  //     } else {
+  //       console.log("Id is missing");
+  //       return false;
+  //     }
+  //   },
+  //   "delete-friend": function (id) {
+  //     if (id) {
+  //       return true;
+  //     } else {
+  //       console.log("Id is missing");
+  //       return false;
+  //     }
+  //   },
+  // },
   data() {
     return {
       detailsAreVisible: false,
@@ -64,6 +73,9 @@ export default {
     },
     toggleFavorite() {
       this.$emit("toggle-favorite", this.id);
+    },
+    deleteFriend() {
+      this.$emit("delete-friend", this.id);
     },
   },
 };
