@@ -20,7 +20,7 @@ export default {
   data() {
     return {
       enteredName: "",
-      enteredAge: "",
+      enteredAge: null,
     };
   },
   methods: {

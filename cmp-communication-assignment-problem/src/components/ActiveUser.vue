@@ -1,8 +1,8 @@
 <template>
-  <div>
+  <section>
     <h2>{{ username }}</h2>
     <h3>{{ age }}</h3>
-  </div>
+  </section>
 </template>
 
 <script>
@@ -13,7 +13,7 @@ export default {
       required: true,
     },
     age: {
-      type: String,
+      type: Number,
       required: true,
     },
   },
